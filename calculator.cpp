@@ -90,19 +90,19 @@ string sum(string firstNumber, string secondNumber) {
 
 string subtraction(string firstNumber, string secondNumber) {
 	
-  	while (secondNumber.length() < firstNumber.length()) {
+	while (secondNumber.length() < firstNumber.length()) {
     	secondNumber = "0" + secondNumber;
   	}
   	
-  	while (firstNumber.length() < secondNumber.length()) {
+	while (firstNumber.length() < secondNumber.length()) {
     	firstNumber = "0" + firstNumber;
-  	}
+	}
   	
-  	for (int numberIndex = secondNumber.length() - 1; numberIndex >= 0; --numberIndex) {
+	for (int numberIndex = secondNumber.length() - 1; numberIndex >= 0; --numberIndex) {
     	if (firstNumber[numberIndex] >= secondNumber[numberIndex]) {
     		firstNumber[numberIndex] = firstNumber[numberIndex] - secondNumber[numberIndex] + 48;
     	} else {
-      		int reservePosition = numberIndex - 1;
+    		int reservePosition = numberIndex - 1;
       		while (firstNumber[reservePosition] == '0') {
         		firstNumber[reservePosition] = '9';
         		reservePosition -= 1;
